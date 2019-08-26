@@ -1,0 +1,68 @@
+button {
+  transition-duration: 0.2s;
+  border: 1px solid #dadfe1;
+  border-radius: 3px;
+  height: 50px;
+  font-size: 15px;
+  flex-grow: 1;
+  font-family: DM Sans;
+  font-weight: bold;
+}
+button:hover {
+  transition-duration: 0.2s;
+  border-color: #2e3131;
+  background-color: #2e3131;
+  color: white;
+  cursor: pointer;
+}
+button:focus {
+  outline: 0;
+}
+input:focus {
+  outline: 0;
+}
+.item {
+  border-radius: 3px;
+  background-color: #59abe3;
+  color: white;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+  font-family: DM Sans;
+}
+.break {
+  border-radius: 3px;
+  background-color: #1f3a93;
+  color: white;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+  font-family: DM Sans;
+}
+.site {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 3px;
+  background-color: #ecf0f1;
+  border: 1px solid #dadfe1;
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 14px;
+  font-family: DM Sans;
+}
+#add-site-plus-icon {
+  cursor: pointer;
+  color: #999999;
+  font-size: 18px
+}
+#add-site-plus-icon:hover {
+  color: #595959;
+}
+.fas.fa-trash {
+  color: #999999;
+}
+.fas.fa-trash:hover {
+  color: #595959;
+  cursor: pointer;
+}

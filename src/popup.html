@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="scripts/jquery.timepicker.min.js"></script>
+    <script src="scripts/datepair.min.js"></script>
+    <script src="scripts/jquery.datepair.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/f6cf98d583.js"></script>
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/jquery.timepicker.min.css">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans|Lexend+Deca&display=swap" rel="stylesheet">
+    
+    <script type="text/javascript" src="popup.js"></script>
+  </head>
+  <body style="height: 600px; width: 350px; margin: 0px">
+    <div id="header" style="display: flex; justify-content: center; align-items: center; position: relative; top: 0px; padding: 10px; background-color: #1f3a93;">
+      <span style="font-family: Lexend Deca; font-size: 25px; color: white"> Slate </span>
+    </div>
+
+    <div id="events" style="position: relative; padding: 10px">
+      <div style="display: flex; flex-direction: row">
+        <button id="add-task-button" style="margin-right: 5px"> Add Task </button>
+        <button id="add-break-button" style="margin-left: 5px"> Add Break </button>
+      </div>
+
+      <button id="clear-events-button" style="width: 100%; margin-top: 10px">Clear Events</button>
+
+      <div id="add-task-form" style="display: flex; flex-direction: column; background-color: #ecf0f1; padding: 5px; margin-top: 5px">
+        <div style="display: flex">
+          <label for="title">Title</label>
+          <input type="text" id="title" style="flex-grow: 1">
+        </div>
+        <div id="add-task-form-times" style="display: flex">
+          <label>Duration</label>
+          <input type="text" class="time start" id="add-task-form-times-start" style="flex-grow: 1">
+          <input type="text" class="time end" id="add-task-form-times-end" style="flex-grow: 1">
+        </div>
+        <button id="add-task-form-button" style="width: 100%"> Add </button>
+      </div>
+
+      <div id="add-break-form" style="display: flex; flex-direction: column; background-color: #ecf0f1; padding: 10px; margin-top: 5px">
+        <div id="add-break-form-times" style="display: flex">
+          <input type="text" class="time start" id="add-break-form-times-start" style="flex-grow: 1">
+          <input type="text" class="time end" id="add-break-form-times-end" style="flex-grow: 1">
+        </div>
+        <button id="add-break-form-button"> Add </button>
+      </div>
+
+      <div id="events-wrapper" style="height: 380px; margin-top: 5px; overflow: scroll"></div>
+    </div>
+
+    <div id="blocked-sites-wrapper" style="position: relative; padding: 10px">
+      <div style="display: flex; flex-direction: row; justify-content: space-between">
+        <span style="font-family: DM Sans; font-size: 18px"> Blocked Websites </span>
+        <i id="add-site-plus-icon" class="fas fa-plus"></i>
+      </div>
+
+      <button id="clear-sites-button" style="width: 100%; margin-top: 5px">Clear Sites</button>
+
+      <div id="add-site-form" style="display: flex; flex-direction: row; position: relative; height: 25px; margin-top: 5px">
+        <input id="add-site-form-input" type="text" style="flex-grow: 1; margin-right: 2.5px; border-style: solid; border-radius: 3px; border-width: 1px; border-color: #dadfe1">
+        <button id="add-site-form-button" style="height: 25px; font-size: 12px; flex-grow: 0; margin-left: 2.5px"> Add </button>
+      </div>
+
+      <div id="sites-wrapper" style="position: relative; height: 415px; overflow: scroll"></div>
+    </div>
+
+    <div id="navigator" style="display: flex; flex-direction: row; justify-content: space-around; position: absolute; bottom: 0px; width: 100%; font-size: 25px; padding: 10px; border-top: 1px solid #dadfe1; background-color: white">
+      <i id="calendar-icon" class="far fa-calendar-alt" style="color: #2e3131; cursor: pointer"></i>
+      <i id="sites-icon" class="fas fa-atlas" style="color: #abb7b7; cursor: pointer"></i>
+    </div>
+  </body>
+</html>
