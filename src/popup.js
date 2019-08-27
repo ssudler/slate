@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", function(){
     chrome.storage.sync.get(['events'], function(objects) {
       let temp = objects.events;
       temp.push([title, start, end]);
-      //alert(temp);
       chrome.storage.sync.set({'events': temp});
     });
 
@@ -94,6 +93,8 @@ document.addEventListener("DOMContentLoaded", function(){
     site = $("#add-site-form-input").val();
     if (site == "") {
       alert("Enter a valid website");
+    } else if (site.includes(" ")) {
+      alert("No spaces");
     } else {
       $("#sites-wrapper").append('<div class="site"><span>'+ site +'</span><i class="fas fa-trash" id='+ site +'></i></div>');
       $("#add-site-form-input").val("");

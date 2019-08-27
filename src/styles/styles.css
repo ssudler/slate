@@ -1,3 +1,6 @@
+span {
+  font-family: DM Sans;
+}
 button {
   transition-duration: 0.2s;
   border: 1px solid #dadfe1;
@@ -17,6 +20,14 @@ button:hover {
 }
 button:focus {
   outline: 0;
+}
+label {
+  font-size: 12px;
+  font-family: DM Sans;
+}
+input {
+  border-radius: 3px;
+  border: 1px solid #dadfe1;
 }
 input:focus {
   outline: 0;
