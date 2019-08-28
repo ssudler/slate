@@ -34,7 +34,7 @@ chrome.webRequest.onBeforeRequest.addListener(function(details) {
       if (moment().isBetween(moment(start, "HH:mm:ss"), moment(end, "HH:mm:ss"))) {
         for (var j = 0; j < localSites.length; j++) {
           if (details.url.includes(localSites[j])) {
-            return {redirectUrl: "chrome-extension://kaccfmfglkdmgngpdoicbnlpdnheknnd/restricted.html"}
+            return {redirectUrl: "chrome-extension://"+chrome.runtime.id+"/restricted.html"}
           }
         }
       }
