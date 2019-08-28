@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
       }
     } else {
       chrome.storage.sync.set({'events': []});
-      alert("Added events array");
+      //alert("Added events array");
     }
   });
 
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function(){
   })
 
   $("#add-site-form-button").click(function(){
-    site = $("#add-site-form-input").val();
+    site = $("#add-site-form-input").val().replace(/\/+$/, "");
     if (site == "") {
       alert("Enter a valid website");
     } else if (site.includes(" ")) {

@@ -21,6 +21,7 @@ chrome.storage.onChanged.addListener(function(changes, areaName) {
   } else if (Object.keys(changes) == 'sites') {
     //console.log("sites changed");
     localSites = changes["sites"].newValue;
+    console.log(localSites);
   } else {
     console.log("Unidentified change");
   }
