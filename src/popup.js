@@ -154,7 +154,7 @@ document.addEventListener("DOMContentLoaded", function(){
   $('#add-site-plus-icon').click(function() {
     $("#add-site-form").slideDown();
   });
-  $('#add-site-form-close-icon').click(function() {
+  $('#add-site-form-close-button').click(function() {
     $("#add-site-form").slideUp();
     $("#add-site-form").find('input:text').val("");
   });
