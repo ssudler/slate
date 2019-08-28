@@ -18,6 +18,9 @@ button:hover {
   color: white;
   cursor: pointer;
 }
+button:hover > #add-site-form-close-icon {
+  color: white;
+}
 button:focus {
   outline: 0;
 }
@@ -84,10 +87,9 @@ input:focus {
   color: #595959;
   cursor: pointer;
 }
-.far.fa-window-close {
-  color: #cccccc;
+#add-site-form-close-icon {
+  color: black;
 }
-.far.fa-window-close:hover {
-  color: #aaaaaa;
-  cursor: pointer;
+#add-site-form-close-icon:hover {
+  color: white;
 }
