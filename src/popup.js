@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function(){
       chrome.storage.sync.set({'events': temp});
     });
 
-    $("#events").find('input:text').val("");
+    $("#add-task-form").find('input:text').val("");
     $("#add-task-form").slideUp();
   });
 
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function(){
       chrome.storage.sync.set({'events': temp});
     });
 
-    $("#events").find('input:text').val("");
+    $("#add-break-form").find('input:text').val("");
     $("#add-break-form").slideUp();
   })
 
@@ -127,9 +127,17 @@ document.addEventListener("DOMContentLoaded", function(){
   $('#add-task-button').click(function() {
     $("#add-task-form").slideDown();
   });
+  $('#add-task-form-close-icon').click(function(){
+    $("#add-task-form").slideUp();
+    $("#add-task-form").find('input:text').val("");
+  });
 
   $('#add-break-button').click(function(){
     $("#add-break-form").slideDown();
+  });
+  $('#add-break-form-close-icon').click(function(){
+    $("#add-break-form").slideUp();
+    $("#add-break-form").find('input:text').val("");
   });
 
   $('#clear-events-button').click(function() {
@@ -146,6 +154,11 @@ document.addEventListener("DOMContentLoaded", function(){
   $('#add-site-plus-icon').click(function() {
     $("#add-site-form").slideDown();
   });
+  $('#add-site-form-close-icon').click(function() {
+    $("#add-site-form").slideUp();
+    $("#add-site-form").find('input:text').val("");
+  });
+
 
   $('#clear-sites-button').click(function() {
     chrome.storage.sync.set({'sites': []});

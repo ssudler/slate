@@ -29,7 +29,10 @@
       <button id="clear-events-button" style="width: 100%; margin-top: 10px">Clear Events</button>
 
       <div id="add-task-form" style="display: flex; flex-direction: column; background-color: #ecf0f1; border-radius: 3px; padding: 5px; margin-top: 5px">
-        <label for="title">Title</label>
+        <div style="display: flex; flex-direction: row; justify-content: space-between">
+          <label for="title">Title</label>
+          <i id="add-task-form-close-icon" class="fas fa-times"></i>
+        </div>
         <input type="text" id="title" style="flex-grow: 1">
         <label for="add-task-form-times-start" style="margin-top: 5px">Duration</label>
         <div id="add-task-form-times" style="display: flex">
@@ -41,7 +44,10 @@
       </div>
 
       <div id="add-break-form" style="display: flex; flex-direction: column; background-color: #ecf0f1; border-radius: 3px; padding: 5px; margin-top: 5px">
-        <label for="add-break-form-times-start">Duration</label>
+        <div style="display: flex; flex-direction: row; justify-content: space-between">
+          <label for="add-break-form-times-start">Duration</label>
+          <i id="add-break-form-close-icon" class="fas fa-times"></i>
+        </div>
         <div id="add-break-form-times" style="display: flex">
           <input type="text" class="time start" id="add-break-form-times-start" style="flex-grow: 1">
           <span style="margin-left: 2px; margin-right: 2px"> to </span>
@@ -62,8 +68,9 @@
       <button id="clear-sites-button" style="width: 100%; margin-top: 5px">Clear Sites</button>
 
       <div id="add-site-form" style="display: flex; flex-direction: row; position: relative; height: 25px; margin-top: 5px">
-        <input id="add-site-form-input" type="text" style="flex-grow: 1; margin-right: 2.5px">
-        <button id="add-site-form-button" style="height: 25px; font-size: 12px; flex-grow: 0; margin-left: 2.5px"> Add </button>
+        <input id="add-site-form-input" type="text" style="flex-grow: 1; margin-right: 5px">
+        <button id="add-site-form-button" style="height: 25px; font-size: 12px; flex-grow: 0; margin-right: 5px"> Add </button>
+        <i id="add-site-form-close-icon" class="far fa-window-close" style="align-self:center; font-size: 28px"></i>
       </div>
 
       <div id="sites-wrapper" style="position: relative; height: 415px; overflow: scroll"></div>
