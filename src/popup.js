@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function(){
     removeSite($(this));
   })
 
-  $("#add-site-form-button").click(function(){
+  $("#add-site-form-button").click(function() {
     site = $("#add-site-form-input").val().replace(/\/+$/, "");
     if (site == "") {
       alert("Enter a valid website");
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function(){
       $("#add-site-form-input").val("");
       $("#add-site-form").slideUp();
 
-      chrome.storage.sync.get(['sites'], function(objects){
+      chrome.storage.sync.get(['sites'], function(objects) {
         let temp = objects.sites;
         temp.push(site);
         chrome.storage.sync.set({'sites': temp});

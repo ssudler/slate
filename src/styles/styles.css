@@ -10,6 +10,7 @@ button {
   flex-grow: 1;
   font-family: DM Sans;
   font-weight: bold;
+  background-color: white;
 }
 button:hover {
   transition-duration: 0.2s;
@@ -29,8 +30,10 @@ label {
   font-family: DM Sans;
 }
 input {
+  padding: 5px;
   border-radius: 3px;
   border: 1px solid #dadfe1;
+  min-width: 0;
 }
 input:focus {
   outline: 0;
