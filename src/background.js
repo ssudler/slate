@@ -2,6 +2,7 @@ var localEvents = [];
 var localSites = [];
 
 chrome.storage.sync.get(null, function(objects) {
+  console.log(objects);
   if ('sites' in objects) {
     localSites = objects['sites'];
     //console.log(localSites);
@@ -22,7 +23,7 @@ chrome.storage.onChanged.addListener(function(changes, areaName) {
     //console.log("sites changed");
     localSites = changes["sites"].newValue;
   } else {
-    console.log("Unidentified change");
+    //console.log("Unidentified change");
   }
 });
 

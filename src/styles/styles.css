@@ -1,4 +1,4 @@
-span {
+* {
   font-family: DM Sans;
 }
 button {
@@ -8,7 +8,6 @@ button {
   height: 50px;
   font-size: 15px;
   flex-grow: 1;
-  font-family: DM Sans;
   font-weight: bold;
   background-color: white;
 }
@@ -27,7 +26,6 @@ button:focus {
 }
 label {
   font-size: 12px;
-  font-family: DM Sans;
 }
 input {
   padding: 5px;
@@ -39,22 +37,24 @@ input:focus {
   outline: 0;
 }
 .item {
+  display: flex;
+  flex-direction: column;
   border-radius: 3px;
   background-color: #59abe3;
   color: white;
   padding: 10px;
   margin-top: 5px;
   font-size: 14px;
-  font-family: DM Sans;
 }
 .break {
+  display: flex;
+  flex-direction: column;
   border-radius: 3px;
   background-color: #1f3a93;
   color: white;
   padding: 10px;
   margin-top: 5px;
   font-size: 14px;
-  font-family: DM Sans;
 }
 .site {
   display: flex;
@@ -66,7 +66,6 @@ input:focus {
   padding: 10px;
   margin-top: 5px;
   font-size: 14px;
-  font-family: DM Sans;
 }
 #add-site-plus-icon {
   cursor: pointer;
@@ -81,6 +80,13 @@ input:focus {
 }
 .fas.fa-trash:hover {
   color: #595959;
+  cursor: pointer;
+}
+.fas.fa-trash.event {
+  color: white;
+}
+.fas.fa-trash.event:hover {
+  color: #d9d9d9;
   cursor: pointer;
 }
 .fas.fa-times {
